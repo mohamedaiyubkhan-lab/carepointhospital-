@@ -1,0 +1,110 @@
+.appointment-layout {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: .75fr 1.5fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.appointment-aside {
+  background: var(--navy);
+  color: #d5e5e7;
+  padding: 30px;
+  border-radius: 13px;
+}
+
+.appointment-aside h2 {
+  font: 800 25px Manrope;
+  color: white;
+}
+
+.appointment-aside h3 {
+  color: #7de0cf;
+  margin-top: 30px;
+}
+
+.appointment-aside p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.appointment-aside .text-link {
+  color: #7de0cf;
+}
+
+.patient-form {
+  background: white;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+}
+
+.patient-form h2 {
+  font: 700 22px Manrope;
+  color: var(--navy);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d8e2df;
+  border-radius: 7px;
+  background: white;
+  font: 14px 'DM Sans', sans-serif;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  outline: 2px solid #9adbd0;
+  border-color: var(--teal);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.submit-appointment {
+  border: 0;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#appointmentMessage {
+  color: #087c72;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+@media(max-width:800px) {
+  .appointment-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:520px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+}
